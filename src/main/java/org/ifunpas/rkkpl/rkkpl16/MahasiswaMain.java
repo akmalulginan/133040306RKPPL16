@@ -5,7 +5,6 @@
  */
 package org.ifunpas.rkkpl.rkkpl16;
 
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,6 +13,7 @@ import org.junit.Test;
 //import org.junit.runner.notification.Failure;
 
 import static org.junit.Assert.*;
+
 /**
  *
  * @author SB-604-21
@@ -36,23 +36,14 @@ public class MahasiswaMain {
     @Test
     public void setNamaTest(String nama) {
         mhs.setNama(nama);
-        assertNotNull("seharusnya tidak null", mhs.getNrp());
     }
-    
+
     @After
-    public void selesaiTest(){
+    public void selesaiTest() {
         System.out.println("selesai test");
     }
 
-    
     public static void main(String[] args) {
-//        Result result = JUnitCore.runClasses(JUnitAnnotation.class);
-//        for (Failure failure : result.getFailures()) {
-//            System.out.println(failure.toString());
-//        }
-//        System.out.println(result.wasSuccessful());
-        assertNotNull("seharusnya tidak null", mhs.getNrp());
 
-        
     }
 }
