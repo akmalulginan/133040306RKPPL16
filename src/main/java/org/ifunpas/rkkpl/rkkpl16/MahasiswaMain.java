@@ -5,6 +5,7 @@
  */
 package org.ifunpas.rkkpl.rkkpl16;
 
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,14 +14,13 @@ import org.junit.Test;
 //import org.junit.runner.notification.Failure;
 
 import static org.junit.Assert.*;
-
 /**
  *
  * @author SB-604-21
  */
 public class MahasiswaMain {
 
-    static Mahasiswa mhs;
+    Mahasiswa mhs;
 
     @Before
     public void mulaiTest() {
@@ -31,19 +31,22 @@ public class MahasiswaMain {
     @Test
     public void setNrpTest(String nrp) {
         mhs.setNrp(nrp);
+        assertNotNull("seharusnya tidak null", mhs.getNrp());
     }
 
     @Test
     public void setNamaTest(String nama) {
         mhs.setNama(nama);
+        assertNotNull("seharusnya tidak null", mhs.getNrp());
     }
-
+    
     @After
-    public void selesaiTest() {
+    public void selesaiTest(){
         System.out.println("selesai test");
     }
 
+    
     public static void main(String[] args) {
-
+        
     }
 }
