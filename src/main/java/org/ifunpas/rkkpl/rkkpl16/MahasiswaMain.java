@@ -20,7 +20,7 @@ import static org.junit.Assert.*;
  */
 public class MahasiswaMain {
 
-    Mahasiswa mhs;
+    static Mahasiswa mhs;
 
     @Before
     public void mulaiTest() {
@@ -31,7 +31,6 @@ public class MahasiswaMain {
     @Test
     public void setNrpTest(String nrp) {
         mhs.setNrp(nrp);
-        assertNotNull("seharusnya tidak null", mhs.getNrp());
     }
 
     @Test
@@ -46,11 +45,14 @@ public class MahasiswaMain {
     }
 
     
-//    public static void main(String[] args) {
+    public static void main(String[] args) {
 //        Result result = JUnitCore.runClasses(JUnitAnnotation.class);
 //        for (Failure failure : result.getFailures()) {
 //            System.out.println(failure.toString());
 //        }
 //        System.out.println(result.wasSuccessful());
-//    }
+        assertNotNull("seharusnya tidak null", mhs.getNrp());
+
+        
+    }
 }
